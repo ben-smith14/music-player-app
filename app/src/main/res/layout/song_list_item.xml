@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="@dimen/medium_padding_margin">
 
     <ImageView
         android:id="@+id/album_cover"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/album_art_list"
+        android:layout_height="@dimen/album_art_list"
         android:adjustViewBounds="true"
         android:contentDescription="@string/album_cover"
         tools:src="@drawable/bonkers_art" />
@@ -18,8 +18,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/medium_padding_margin"
+        android:layout_marginStart="@dimen/medium_padding_margin"
         android:layout_weight="10"
         android:orientation="vertical">
 
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="18sp"
+            android:textSize="@dimen/list_text_size"
             tools:text="Bonkers" />
 
         <TextView
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textSize="@dimen/list_sub_text"
             tools:text="Dizzee Rascal &amp; Armand Van Helden" />
 
     </LinearLayout>
@@ -50,7 +50,7 @@
         android:layout_gravity="center"
         android:layout_weight="2"
         android:gravity="center"
-        android:textSize="16sp"
+        android:textSize="@dimen/list_text_size"
         tools:text="4:23" />
 
 </LinearLayout>

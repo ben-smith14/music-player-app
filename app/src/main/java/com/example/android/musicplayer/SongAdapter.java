@@ -18,13 +18,17 @@ public class SongAdapter extends ArrayAdapter<Song> {
         super(context, 0, objects);
     }
 
-    // Provide a view item for our Songs ListView to display at the current position in the
-    // list. Use a recycled view, stored in convertView, if one is available
+    /*
+    Provide a view item for our Songs ListView to display at the current position in the
+    list. Use a recycled view, stored in convertView, if one is available
+    */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        // First, check if an existing view is being reused. If there isn't one available,
-        // inflate a new view from the layout file
+        /*
+        First, check if an existing view is being reused. If there isn't one available,
+        inflate a new view from the layout file
+        */
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
@@ -35,8 +39,10 @@ public class SongAdapter extends ArrayAdapter<Song> {
         Song currentSong = getItem(position);
 
         if (currentSong != null) {
-            // Find the relevant views in the song_list_item XML file and set their contents
-            // to the values stored within the current Song object
+            /*
+            Find the relevant views in the song_list_item XML file and set their contents
+            to the values stored within the current Song object
+            */
             ImageView albumCover = listItemView.findViewById(R.id.album_cover);
             albumCover.setImageResource(currentSong.getSongImageID());
 
@@ -46,8 +52,10 @@ public class SongAdapter extends ArrayAdapter<Song> {
             TextView artistName = listItemView.findViewById(R.id.artist_name);
             artistName.setText(currentSong.getArtistName());
 
-            // Use the static method from the NowPlaying activity to convert the song length to
-            // minutes and seconds
+            /*
+            Use the static method from the NowPlaying activity to convert the song length to
+            minutes and seconds
+            */
             TextView songLength = listItemView.findViewById(R.id.song_length);
             songLength.setText(NowPlayingActivity.convertSongLength(currentSong.getSongLength()));
         }

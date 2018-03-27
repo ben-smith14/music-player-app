@@ -11,11 +11,10 @@
         android:id="@+id/list_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/medium_padding_margin"
+        android:layout_marginRight="@dimen/medium_padding_margin"
+        android:layout_marginTop="@dimen/medium_padding_margin"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textSize="20sp"
         android:textStyle="bold"
         tools:text="@string/search_icon" />
 
@@ -23,7 +22,7 @@
         android:id="@+id/search_by_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/medium_padding_margin"
         android:orientation="horizontal">
 
         <RadioButton
@@ -57,14 +56,14 @@
         android:id="@+id/search_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/medium_padding_margin"
+        android:layout_marginLeft="@dimen/medium_padding_margin"
+        android:layout_marginRight="@dimen/medium_padding_margin"
         android:background="@drawable/bubble_edit_text"
         android:hint="@string/hint_text"
         android:imeOptions="actionDone|flagNoExtractUi"
         android:inputType="text"
-        android:padding="8dp"
+        android:padding="@dimen/small_padding_margin"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <!-- Add both a ListView and GridView to a ViewFlipper here so that they

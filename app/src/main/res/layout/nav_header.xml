@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="@dimen/nav_header_height"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <!-- Image src: https://www.walldevil.com/purple-silk-wallpaper-856963/ -->
@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/medium_padding_margin"
         android:text="@string/nav_header_txt"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 

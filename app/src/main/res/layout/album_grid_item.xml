@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="@dimen/medium_padding_margin">
 
     <ImageView
         android:id="@+id/grid_song_image"
@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:layout_gravity="center"
+        android:contentDescription="@string/album_cover"
         tools:src="@drawable/bonkers_art" />
 
     <TextView
@@ -19,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/small_padding_margin"
         android:ellipsize="end"
         android:maxLines="1"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"

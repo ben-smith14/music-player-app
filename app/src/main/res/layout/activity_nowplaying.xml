@@ -11,8 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="8dp"
-        android:padding="8dp"
+        android:layout_margin="@dimen/small_padding_margin"
+        android:padding="@dimen/small_padding_margin"
+        android:contentDescription="@string/close_now_playing"
         android:src="@drawable/ic_close" />
 
     <LinearLayout
@@ -24,9 +25,10 @@
 
         <ImageView
             android:id="@+id/song_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/album_art_playing"
+            android:layout_height="@dimen/album_art_playing"
             android:layout_gravity="center"
+            android:contentDescription="@string/album_cover"
             tools:src="@drawable/bonkers_art" />
 
         <TextView
@@ -34,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/small_padding_margin"
             android:ellipsize="end"
             android:maxLines="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -53,8 +55,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginBottom="@dimen/small_padding_margin"
+            android:layout_marginTop="@dimen/large_padding_margin"
             android:orientation="horizontal">
 
             <TextView
@@ -62,8 +64,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginLeft="@dimen/medium_padding_margin"
+                android:layout_marginStart="@dimen/medium_padding_margin"
                 android:layout_weight="2"
                 android:gravity="end"
                 android:text="@string/zero_time"
@@ -82,8 +84,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="@dimen/medium_padding_margin"
+                android:layout_marginRight="@dimen/medium_padding_margin"
                 android:layout_weight="2"
                 android:gravity="start"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -102,8 +104,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/large_padding_margin"
+            android:layout_marginTop="@dimen/medium_padding_margin"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -112,15 +114,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:contentDescription="@string/skip_back"
                 android:src="@drawable/ic_fast_rewind" />
 
             <ImageButton
                 android:id="@+id/play_pause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="@dimen/medium_padding_margin"
+                android:layout_marginRight="@dimen/medium_padding_margin"
                 android:background="@android:color/transparent"
+                android:contentDescription="@string/play_pause"
                 tools:src="@drawable/ic_pause_circle" />
 
             <ImageButton
@@ -128,6 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:contentDescription="@string/skip_forward"
                 android:src="@drawable/ic_fast_forward" />
 
         </LinearLayout>
@@ -136,25 +141,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/medium_padding_margin"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/repeat_song"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="@dimen/medium_padding_margin"
+                android:layout_marginRight="@dimen/medium_padding_margin"
                 android:background="@android:color/transparent"
+                android:contentDescription="@string/repeat_button"
                 tools:src="@drawable/ic_repeat" />
 
             <ImageButton
                 android:id="@+id/shuffle_songs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginLeft="@dimen/medium_padding_margin"
+                android:layout_marginStart="@dimen/medium_padding_margin"
                 android:background="@android:color/transparent"
+                android:contentDescription="@string/shuffle_button"
                 tools:src="@drawable/ic_shuffle" />
 
         </LinearLayout>

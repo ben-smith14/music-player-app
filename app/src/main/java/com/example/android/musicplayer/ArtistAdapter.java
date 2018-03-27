@@ -18,13 +18,17 @@ public class ArtistAdapter extends ArrayAdapter<String> {
         super(context, 0, objects);
     }
 
-    // Provide a view item for our Artists ListView to display at the current position in the
-    // list. Use a recycled view, stored in convertView, if one is available
+    /*
+    Provide a view item for our Artists ListView to display at the current position in the
+    list. Use a recycled view, stored in convertView, if one is available
+    */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        // First, check if an existing view is being reused. If there isn't one available,
-        // inflate a new view from the layout file
+        /*
+        First, check if an existing view is being reused. If there isn't one available,
+        inflate a new view from the layout file
+        */
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(

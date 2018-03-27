@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="@dimen/medium_padding_margin">
 
     <TextView
         android:id="@+id/artist_name_item"
@@ -13,10 +13,10 @@
         android:layout_gravity="center"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textSize="18sp"
+        android:textSize="@dimen/list_text_size"
         android:drawableLeft="@drawable/ic_face_pink"
         android:drawableStart="@drawable/ic_face_pink"
-        android:drawablePadding="16dp"
+        android:drawablePadding="@dimen/medium_padding_margin"
         tools:text="Ed Sheeran" />
 
 </LinearLayout>

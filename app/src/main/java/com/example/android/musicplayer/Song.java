@@ -22,12 +22,11 @@ public class Song implements Parcelable, Comparable<Song> {
         this.mSongImageID = songImage;
     }
 
-    /**
-     * Implement the Parcelable interface so that we can bundle our ArrayList of Songs and pass
-     * it between the various Fragments used in the MainActivity.
-     * (See https://developer.android.com/reference/android/os/Parcelable.html)
-     */
-    // **********************************************************************************
+    /*
+    Implement the Parcelable interface so that we can bundle our ArrayList of Songs and pass
+    it between the various Fragments used in the MainActivity.
+    (See https://developer.android.com/reference/android/os/Parcelable.html)
+    */
     public static final Parcelable.Creator<Song> CREATOR = new Parcelable.Creator<Song>() {
         public Song createFromParcel(Parcel in) {
             return new Song(in);
@@ -57,23 +56,23 @@ public class Song implements Parcelable, Comparable<Song> {
     public int describeContents() {
         return 0;
     }
-    // ************************************************************************************
 
-    /**
-     * Implement the Comparable interface so that we can sort the ArrayList of Songs by the
-     * song name, the artist(s) name and the album name when required.
-     * (See: https://developer.android.com/reference/java/lang/Comparable.html)
-     */
-    // ************************************************************************************
+    /*
+    Implement the Comparable interface so that we can sort the ArrayList of Songs by the
+    song name, the artist(s) name and the album name when required.
+    (See: https://developer.android.com/reference/java/lang/Comparable.html)
+    */
     @Override
     public int compareTo(@NonNull Song song) {
         return this.getSongName().compareTo(song.getSongName());
     }
 
-    // The default compareTo method compares the song by their name. If we want to compare by
-    // album name instead, we need to implement the following anonymous class with its own
-    // compare methods. To then use this instead of the default, we use
-    // Collections.sort(songsList, Song.AlbumNameComparator);
+    /*
+    The default compareTo method compares the song by their name. If we want to compare by
+    album name instead, we need to implement the following anonymous class with its own
+    compare methods. To then use this instead of the default, we use
+    Collections.sort(songsList, Song.AlbumNameComparator);
+    */
     public static Comparator<Song> AlbumNameComparator = new Comparator<Song>() {
         public int compare(Song song1, Song song2) {
             String songAlbum1 = song1.getAlbumName();
@@ -84,7 +83,6 @@ public class Song implements Parcelable, Comparable<Song> {
             return songAlbum1.compareTo(songAlbum2);
         }
     };
-    // ************************************************************************************
 
     public String getSongName() {
         return mSongName;

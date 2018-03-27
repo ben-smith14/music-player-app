@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="album_art_playing">200dp</dimen>
+    <dimen name="album_art_list">50dp</dimen>
+    <dimen name="small_padding_margin">8dp</dimen>
+    <dimen name="medium_padding_margin">16dp</dimen>
+    <dimen name="large_padding_margin">32dp</dimen>
+    <dimen name="nav_header_height">180dp</dimen>
+
+    <dimen name="list_text_size">18sp</dimen>
+    <dimen name="list_sub_text">12sp</dimen>
+</resources>

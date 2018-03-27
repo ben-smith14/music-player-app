@@ -14,21 +14,25 @@ public class AlbumActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_album);
+        setContentView(R.layout.activity_artist_album);
 
         // Retrieve the selected artist's name and the entire list of songs
-        Intent intent = getIntent();
-        String albumName = intent.getStringExtra("album");
-        ArrayList<Song> songList = intent.getParcelableArrayListExtra("songList");
+        Intent albumIntent = getIntent();
+        String albumName = albumIntent.getStringExtra(Constants.ALBUM_NAME_KEY);
+        ArrayList<Song> songList = albumIntent.getParcelableArrayListExtra(Constants.SONG_LIST_KEY);
 
-        // Replace the standard action bar for this activity with the custom toolbar and add
-        // the title text to it
-        Toolbar toolbar = findViewById(R.id.toolbar_albums);
-        toolbar.setTitle(getString(R.string.albums_text));
-        setSupportActionBar(toolbar);
+        /*
+        Replace the standard action bar for this activity with the custom toolbar and add
+        the title text to it
+        */
+        Toolbar customToolbar = findViewById(R.id.toolbar_artists_albums);
+        customToolbar.setTitle(getString(R.string.albums_text));
+        setSupportActionBar(customToolbar);
 
-        // Add a "home" button to the toolbar that can be used to navigate back to the list of
-        // artists in the library activity
+        /*
+        Add a "home" button to the toolbar that can be used to navigate back to the list of
+        artists in the library activity
+        */
         ActionBar newActionBar = getSupportActionBar();
         if (newActionBar != null) {
             newActionBar.setDisplayHomeAsUpEnabled(true);
@@ -44,25 +48,31 @@ public class AlbumActivity extends AppCompatActivity {
             }
         }
 
-        // If the app is being restored from a previous state then we don't need to do
-        // anything and should return or else we could end up with overlapping fragments
+        /*
+        If the app is being restored from a previous state then we don't need to do
+        anything and should return or else we could end up with overlapping fragments
+        */
         if (savedInstanceState != null) {
             return;
         }
 
-        // If there is no previous state, create a bundle and add the album's name and song
-        // list to it so that they can be passed to the fragment when it is opened
-        Bundle bundle = new Bundle();
-        bundle.putString("headerText", albumName);
-        bundle.putParcelableArrayList("songsList", albumSongList);
+        /*
+        If there is no previous state, create a bundle and add the album's name and song
+        list to it so that they can be passed to the fragment when it is opened
+        */
+        Bundle albumBundle = new Bundle();
+        albumBundle.putString(Constants.HEADER_TEXT_KEY, albumName);
+        albumBundle.putParcelableArrayList(Constants.SONG_LIST_KEY, albumSongList);
 
-        // Create a new fragment to be placed in the activity layout's fragment container
-        // and pass the relevant arguments to it
+        /*
+        Create a new fragment to be placed in the activity layout's fragment container
+        and pass the relevant arguments to it
+        */
         SongsFragment songsFragment = new SongsFragment();
-        songsFragment.setArguments(bundle);
+        songsFragment.setArguments(albumBundle);
 
         // Add the fragment to the FrameLayout container
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container_albums, songsFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container_artists_albums, songsFragment).commit();
     }
 
     // Allows the back button to navigate to the previous activity when selected
