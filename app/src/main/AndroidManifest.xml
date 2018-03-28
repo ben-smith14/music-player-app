@@ -18,9 +18,26 @@
         <activity
             android:name=".NowPlayingActivity"
             android:screenOrientation="portrait"
-            android:label="@string/now_playing_text"/>
-        <activity android:name=".ArtistActivity" android:label="@string/artists_text" />
-        <activity android:name=".AlbumActivity" android:label="@string/albums_text" />
+            android:label="@string/now_playing_text" >
+        <!-- Declare parent activity for back navigation -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.musicplayer.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ArtistActivity"
+            android:label="@string/artists_text" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.musicplayer.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AlbumActivity"
+            android:label="@string/albums_text" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.musicplayer.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
