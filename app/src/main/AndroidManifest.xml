@@ -8,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:label="@string/library_text">
+        <activity android:name=".activity.MainActivity" android:label="@string/library_text">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,27 +16,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NowPlayingActivity"
+            android:name=".activity.NowPlayingActivity"
             android:screenOrientation="portrait"
             android:label="@string/now_playing_text" >
         <!-- Declare parent activity for back navigation -->
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.example.android.musicplayer.MainActivity" />
+            android:value="com.example.android.musicplayer.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".ArtistActivity"
+            android:name=".activity.ArtistActivity"
             android:label="@string/artists_text" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.musicplayer.MainActivity" />
+                android:value="com.example.android.musicplayer.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".AlbumActivity"
+            android:name=".activity.AlbumActivity"
             android:label="@string/albums_text" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.musicplayer.MainActivity" />
+                android:value="com.example.android.musicplayer.activity.MainActivity" />
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +18,16 @@ import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import com.example.android.musicplayer.R;
+import com.example.android.musicplayer.adapter.SongAdapter;
+import com.example.android.musicplayer.activity.AlbumActivity;
+import com.example.android.musicplayer.activity.ArtistActivity;
+import com.example.android.musicplayer.activity.NowPlayingActivity;
+import com.example.android.musicplayer.adapter.AlbumAdapter;
+import com.example.android.musicplayer.adapter.ArtistAdapter;
+import com.example.android.musicplayer.general.Song;
+import com.example.android.musicplayer.utils.Constants;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -85,7 +95,7 @@ public class SearchFragment extends Fragment {
         Inflate the relevant layout file, retrieve the header text view and set its value to
         the correct String
         */
-        mMainLayoutView = inflater.inflate(R.layout.search_list_view, container, false);
+        mMainLayoutView = inflater.inflate(R.layout.fragment_search_list, container, false);
         TextView headerTextView = mMainLayoutView.findViewById(R.id.list_header);
         headerTextView.setText(headerText);
 

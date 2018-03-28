@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.utils;
 
 public final class Constants {
 

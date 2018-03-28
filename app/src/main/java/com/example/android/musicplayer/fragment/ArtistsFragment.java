@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.fragment;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
@@ -11,6 +11,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.android.musicplayer.R;
+import com.example.android.musicplayer.activity.ArtistActivity;
+import com.example.android.musicplayer.adapter.ArtistAdapter;
+import com.example.android.musicplayer.general.Song;
+import com.example.android.musicplayer.utils.Constants;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -90,7 +96,7 @@ public class ArtistsFragment extends ListFragment {
         Inflate the relevant layout file, retrieve the header text and set its value to the
         correct String
         */
-        View mainLayoutView = inflater.inflate(R.layout.list_view, container, false);
+        View mainLayoutView = inflater.inflate(R.layout.layout_list_view, container, false);
         TextView headerTextView = mainLayoutView.findViewById(R.id.list_header);
         headerTextView.setText(headerText);
 

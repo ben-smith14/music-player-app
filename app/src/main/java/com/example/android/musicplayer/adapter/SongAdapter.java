@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,11 +10,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.musicplayer.R;
+import com.example.android.musicplayer.activity.NowPlayingActivity;
+import com.example.android.musicplayer.general.Song;
+
 import java.util.List;
 
 public class SongAdapter extends ArrayAdapter<Song> {
 
-    SongAdapter(@NonNull Context context, @NonNull List<Song> objects) {
+    public SongAdapter(@NonNull Context context, @NonNull List<Song> objects) {
         super(context, 0, objects);
     }
 
@@ -32,7 +36,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.song_list_item, parent, false);
+                    R.layout.list_item_song, parent, false);
         }
 
         // Get the Song object located at this position in the list
@@ -40,7 +44,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         if (currentSong != null) {
             /*
-            Find the relevant views in the song_list_item XML file and set their contents
+            Find the relevant views in the list_item_song XML file and set their contents
             to the values stored within the current Song object
             */
             ImageView albumCover = listItemView.findViewById(R.id.album_cover);

@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -11,6 +11,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.android.musicplayer.R;
+import com.example.android.musicplayer.fragment.SearchFragment;
+import com.example.android.musicplayer.fragment.SongsFragment;
+import com.example.android.musicplayer.fragment.AlbumsFragment;
+import com.example.android.musicplayer.fragment.ArtistsFragment;
+import com.example.android.musicplayer.general.Song;
+import com.example.android.musicplayer.utils.Constants;
 
 import java.util.ArrayList;
 
@@ -86,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // Add the search icon to the toolbar by inflating the relevant menu resource
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search_view, menu);
+        getMenuInflater().inflate(R.menu.search_icon_item, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

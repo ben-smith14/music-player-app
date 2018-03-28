@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.activity;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
@@ -9,6 +9,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.example.android.musicplayer.R;
+import com.example.android.musicplayer.general.Song;
+import com.example.android.musicplayer.utils.Constants;
 
 import java.util.ArrayList;
 import java.util.ListIterator;

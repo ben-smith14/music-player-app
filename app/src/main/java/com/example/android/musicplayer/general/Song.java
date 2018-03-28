@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.general;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,4 +1,4 @@
-package com.example.android.musicplayer;
+package com.example.android.musicplayer.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,11 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.musicplayer.R;
+import com.example.android.musicplayer.general.Song;
+
 import java.util.List;
 
 public class AlbumAdapter extends ArrayAdapter<Song> {
 
-    AlbumAdapter(@NonNull Context context, @NonNull List<Song> objects) {
+    public AlbumAdapter(@NonNull Context context, @NonNull List<Song> objects) {
         super(context, 0, objects);
     }
 
@@ -32,7 +35,7 @@ public class AlbumAdapter extends ArrayAdapter<Song> {
         View gridItemView = convertView;
         if (gridItemView == null) {
             gridItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.album_grid_item, parent, false);
+                    R.layout.grid_item_album, parent, false);
         }
 
         // Get the artist's name for the current Song in the list
